@@ -1,0 +1,9 @@
+/* Passes lint: every color is a CSS custom property (design token),
+   no raw hex/rgb/hsl/named values. Mirrors the shape of the invalid
+   fixture so the two can be compared side by side. */
+
+.callout {
+  color: var(--color-fg-default);
+  background: var(--color-canvas-default);
+  border: 1px solid var(--color-border-default);
+}

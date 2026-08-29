@@ -1,0 +1,26 @@
+{
+  "name": "ai-ready-design-system-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fixture repository for the AI-Ready Design System workshop",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "http-server . -o /examples/account-settings/index.html",
+    "build": "node scripts/build-tokens.mjs",
+    "test": "npm run build && vitest run",
+    "lint": "stylelint \"examples/**/*.css\"",
+    "validate": "npm run build && vitest run && npm run lint",
+    "reset": "bash scripts/reset-checkpoint.sh"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1",
+    "stylelint": "17.14.1",
+    "vitest": "4.1.10"
+  },
+  "dependencies": {
+    "design-tokens": "github:lukasoppermann/workshop-design-token-package"
+  }
+}

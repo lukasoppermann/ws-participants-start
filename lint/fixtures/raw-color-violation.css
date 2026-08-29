@@ -1,0 +1,10 @@
+/* Intentionally invalid: raw color values instead of design tokens.
+   This file exists only to prove the lint rule catches raw colors —
+   it is never part of the real product CSS and is excluded from the
+   `npm run lint` glob (examples/**/*.css). See tests/lint.test.mjs. */
+
+.callout {
+  color: #82071e;
+  background: rgb(255, 235, 233);
+  border: 1px solid red;
+}

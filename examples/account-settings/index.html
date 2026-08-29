@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Account settings</title>
+    <link rel="stylesheet" href="../../dist/tokens/light.css" />
+    <link rel="stylesheet" href="../../dist/tokens/dark.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__header">
+        <h1>Account settings</h1>
+        <button type="button" id="theme-toggle" class="theme-toggle">Toggle dark theme</button>
+      </header>
+
+    </main>
+
+    <script>
+      const button = document.getElementById('theme-toggle');
+      button.addEventListener('click', () => {
+        const root = document.documentElement;
+        root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+      });
+    </script>
+  </body>
+</html>
